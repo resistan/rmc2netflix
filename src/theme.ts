@@ -13,24 +13,14 @@ const movieColors = {
 	}
 }
 
-export const theme:DefaultTheme = {
-	textColor: "#2c3e50",
-	bgColor: "#ecf0f1",
-	accentColor: "#c0392b",
-	red: movieColors.red,
-	black: movieColors.black,
-	white: movieColors.white
-}
-export const darkTheme:DefaultTheme = {
-	textColor: "#FFF",
-	bgColor: "#111",
-	accentColor: "teal",
-	red: movieColors.red,
-	black: movieColors.black,
-	white: movieColors.white
-}
-
-
+export const theme: DefaultTheme = {
+  textColor: "#EAEAEA",
+  bgColor: "#111",
+  accentColor: "#c0392b",
+  red: movieColors.red,
+  black: movieColors.black,
+  white: movieColors.white,
+};
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
@@ -64,8 +54,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.2;
   font-weight: 400;
-  background-color: ${props => props.theme.bgColor};
-  color: ${props => props.theme.textColor};
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.textColor};
 }
 ol, ul {
 	list-style: none;

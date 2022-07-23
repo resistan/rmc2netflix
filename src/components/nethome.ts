@@ -30,46 +30,55 @@ export const Overview = styled.p`
 	width: 50%;
 	font-size: 1.5rem;
 `;
-
+export const SlideWrap = styled.div`
+  position: relative;
+  &.firstList {
+    top: -150px;
+  }
+  h2 {
+    padding: 10px 20px;
+    font-size: 24px;
+  }
+`;
 export const Slider = styled(motion.div)`
-	position: relative;
-	top: -150px;
-	button {
-		position: absolute;
-		display:block;
-		height:100%;
-		z-index:100;
-		border:0;
-		background-color: transparent;
-	}
+  button {
+    position: absolute;
+    display: block;
+    height: 100%;
+    z-index: 100;
+    border: 0;
+    background-color: transparent;
+  }
 `;
 export const Row = styled(motion.div)`
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: 5px;
-	position: absolute;
-	width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  position: absolute;
+  width: 100%;
 `;
 export const Box = styled(motion.div)`
-	background-color: #FFF;
-	height: auto;
-	color: ${props => props.theme.red};
-	overflow-y: hidden;
-	&:first-child {
-		transform-origin: left center;
-	}
-	&:last-child {
-		transform-origin: right center;
-	}
-	img {
-		width:100%;
-	}
-`;
-export const PrevBtn = styled.button`
-	left:0;
-`;
-export const NextBtn = styled.button`
-	right:0;
+  background-color: #fff;
+  height: auto;
+  background-color: ${(props) => props.theme.black.darker};
+  color: ${(props) => props.theme.red};
+  overflow-y: hidden;
+  a {
+    display: block;
+    line-height: 0;
+    img {
+      width: 100%;
+    }
+  }
+  &:first-child {
+    transform-origin: left center;
+  }
+  &:last-child {
+    transform-origin: right center;
+  }
+  img {
+    width: 100%;
+  }
 `;
 export const Info = styled(motion.div)`
 	position: absolute;

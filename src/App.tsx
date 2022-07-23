@@ -1,21 +1,18 @@
 import Router from './Router';
 import { ReactQueryDevtools } from "react-query/devtools";
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyle, theme, darkTheme } from './theme';
-import { useRecoilValue } from 'recoil';
-import { isDarkAtom } from './atoms';
+import { GlobalStyle, theme } from "./theme";
 
 function App() {
-	const isDark = useRecoilValue(isDarkAtom);
   return (
     <>
-			<ThemeProvider theme={isDark ? darkTheme : theme}>
-				<GlobalStyle />
-				<Router />
-				<ReactQueryDevtools />
-			</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Router />
+        <ReactQueryDevtools />
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
 export default App;
