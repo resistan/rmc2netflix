@@ -1,4 +1,4 @@
-const API_KEY = process.env.MBDB_API_KEY;
+const API_KEY = process.env.REACT_APP_MBDB_API_KEY;
 const BASE_MOVIE_URL = "https://api.themoviedb.org/3";
 
 interface IMovie {
